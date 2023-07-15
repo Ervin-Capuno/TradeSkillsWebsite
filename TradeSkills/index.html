@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Trading Skills</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A trading of skills website">
+  <meta name="keywords" content="Trade, Skills">
+  <meta name="author" content="Ervin Rey Capuno">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+  <!--Navigation Bar-->
+  <nav class="navbar p-3 navbar-expand-md navbar-light">
+    <!-- Navbar content -->
+    <div class="container-xxl">
+      <a class="navbar-brand" href="#home">TradeSkills.com</a>
+      <!--toggler button-->
+      <button class="navbar-toggler btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+        aria-controls="main-nav" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--the links-->
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav">
+          <li class="nav-item me-2">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item me-2">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item me2">
+            <a href="#aboutDevelopers" class="nav-link">About Developers</a>
+          </li>
+          <li class="nav-item me2">
+            <a href="#donate" class="nav-link">Donate</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-dark me-2 rounded-pill" data-bs-toggle="modal" data-bs-target="#sign-in">Sign
+          In</button>
+        <button class="btn btn-outline-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#sign-up">Sign
+          Up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!--Model for sign-up -->
+  <div class="modal fade" id="sign-up" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3 needs-validation" action="SignUp.php" method="POST" novalidate>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">First name</label>
+              <input type="text" class="form-control" id="validationCustom01" value="Mark" name="firstName" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="validationCustom02" name ="lastName" value="Otto" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustomUsername" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" name="userName" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Age</label>
+              <input type="text" class="form-control" name="age" id="validationCustom01" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" id="validationCustom01" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" id="validationCustom01" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-8">
+              <label for="validationCustom02" class="form-label">Profile Picture</label>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" name="profilePicture" id="validationCustom02" required>
+                <label class="custom-file-label" for="validationCustom02">Choose file</label>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              Hobbies
+            </div>
+
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Master Hobby</label>
+              <input type="text" class="form-control"name="masterHobby" id="validationCustom01" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Secondary Hobby</label>
+              <input type="text" class="form-control" name="secondayHobby" id="validationCustom01" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Tertiary Hobby</label>
+              <input type="text" class="form-control" name="tertiaryHobby" id="validationCustom01" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--Modal for signp-in -->
+  <div class="modal fade" id="sign-in" tab-index="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModal">Sign in</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="signIn.php" method="POST">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+            <label for="passWord" class="form-label">Password</label>
+            <input type="password" class="form-control" id="passWord" name="password" placeholder="password">
+            <button type="submit" class="btn btn-primary mt-3">Sign In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--The homepage-->
+  <section id="home">
+    <div class="container-lg">
+    </div>
+  </section>
+
+
+  <!--about the website-->
+  <section id="about">
+    <div class="container-lg">
+    </div>
+  </section>
+
+
+
+  <!--about the Developers-->
+  <section id="aboutDevelopers">
+    <div class="container-lg">
+    </div>
+  </section>
+
+
+  <!--Donate-->
+  <section id="donate">
+    <div class="container-lg">
+    </div>
+  </section>
+
+  <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
